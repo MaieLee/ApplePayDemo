@@ -15,6 +15,7 @@
 		18D31E151C76AF58006CA7BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D31E131C76AF58006CA7BF /* LaunchScreen.storyboard */; };
 		18D31E201C76AF58006CA7BF /* ApplePayDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D31E1F1C76AF58006CA7BF /* ApplePayDemoTests.m */; };
 		18D31E2B1C76AF58006CA7BF /* ApplePayDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D31E2A1C76AF58006CA7BF /* ApplePayDemoUITests.m */; };
+		18D31E3D1C770B6B006CA7BF /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D31E3C1C770B6B006CA7BF /* PassKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		18D31E261C76AF58006CA7BF /* ApplePayDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApplePayDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D31E2A1C76AF58006CA7BF /* ApplePayDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplePayDemoUITests.m; sourceTree = "<group>"; };
 		18D31E2C1C76AF58006CA7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D31E3B1C770AFF006CA7BF /* ApplePayDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ApplePayDemo.entitlements; sourceTree = "<group>"; };
+		18D31E3C1C770B6B006CA7BF /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D31E3D1C770B6B006CA7BF /* PassKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 		18D31DF91C76AF58006CA7BF = {
 			isa = PBXGroup;
 			children = (
+				18D31E3C1C770B6B006CA7BF /* PassKit.framework */,
 				18D31E041C76AF58006CA7BF /* ApplePayDemo */,
 				18D31E1E1C76AF58006CA7BF /* ApplePayDemoTests */,
 				18D31E291C76AF58006CA7BF /* ApplePayDemoUITests */,
@@ -101,6 +106,7 @@
 		18D31E041C76AF58006CA7BF /* ApplePayDemo */ = {
 			isa = PBXGroup;
 			children = (
+				18D31E3B1C770AFF006CA7BF /* ApplePayDemo.entitlements */,
 				18D31E081C76AF58006CA7BF /* AppDelegate.h */,
 				18D31E091C76AF58006CA7BF /* AppDelegate.m */,
 				18D31E0B1C76AF58006CA7BF /* ViewController.h */,
@@ -207,6 +213,12 @@
 				TargetAttributes = {
 					18D31E011C76AF58006CA7BF = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = NHH9WJ5BB6;
+						SystemCapabilities = {
+							com.apple.OMC = {
+								enabled = 0;
+							};
+						};
 					};
 					18D31E1A1C76AF58006CA7BF = {
 						CreatedOnToolsVersion = 7.2;
@@ -411,10 +423,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mylee.ApplePayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -422,10 +438,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ApplePayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mylee.ApplePayDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -496,6 +516,7 @@
 				18D31E311C76AF58006CA7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D31E321C76AF58006CA7BF /* Build configuration list for PBXNativeTarget "ApplePayDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +525,7 @@
 				18D31E341C76AF58006CA7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D31E351C76AF58006CA7BF /* Build configuration list for PBXNativeTarget "ApplePayDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +534,7 @@
 				18D31E371C76AF58006CA7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

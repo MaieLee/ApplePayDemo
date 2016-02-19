@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import <PassKit/PassKit.h>
+
 @interface ViewController : UIViewController
+<PKPaymentAuthorizationViewControllerDelegate>
 
 
 @end

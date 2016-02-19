@@ -16,11 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ho-tb-jXn">
+                                <rect key="frame" x="183" y="60" width="234" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="4L4-tA-fyj"/>
+                                    <constraint firstAttribute="width" constant="234" id="dKU-1X-BbK"/>
+                                </constraints>
+                                <state key="normal" image="applepay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mw-A9-lur"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ho-tb-jXn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="oXQ-Hb-WkA"/>
+                            <constraint firstItem="2ho-tb-jXn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tbT-la-iNo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="279" y="415"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="applepay" width="194" height="64"/>
+    </resources>
 </document>
